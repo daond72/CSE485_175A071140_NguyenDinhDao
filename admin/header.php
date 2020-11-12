@@ -147,6 +147,9 @@
                         
                     </li>
                     <li>
+                    <a href="select-hoso-process.php">Quản lý hồ sơ</a>
+                    </li>
+                    <>
                         <a href="javascript:void(0);" class="menu-toggle">
                             
                             <i class="glyphicon glyphicon-print"></i>&nbsp;&nbsp;Thư viện
@@ -163,7 +166,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </>
                 </ul><br><br><br>
                 <div class="dtime">
                     <div class="alert alert-info">
