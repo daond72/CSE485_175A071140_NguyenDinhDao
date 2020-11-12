@@ -2,14 +2,12 @@
 include ('connect.php');
 
 if(isset($_POST['login'])){
-$admin_user = $_POST['admin_user'];
-$admin_pass = $_POST['admin_pass'];
+$admin_user = $_POST['taikhoan'];
+$admin_pass= $_POST['matkhau'];
 
-$fetch = $con->prepare("SELECT * FROM dangnhap WHERE tendangnhap = ? AND admin_pass = ?  And phanquyen = ?");
-$fetch->execute(array($admin_user, $admin_pass, 1));
-$count = $fetch->rowcount();
-$row = $fetch->fetch();
-
+$sql="SELECT * FROM admin WHERE taikhoan = '$admin_user' AND matkhau = '$admin_pass'  And quyen = 1 ";
+$result = mysqli_query($conn,$sql);
+$count = mysqli_affected_rows($conn);
 if($count > 0) {
 
 	session_start();
@@ -20,10 +18,9 @@ if($count > 0) {
 
 	
 } else {
-$fetch1 = $con->prepare("SELECT * FROM dangnhap WHERE tendangnhap = ? AND admin_pass = ?  And phanquyen = ?");
-$fetch1->execute(array($admin_user, $admin_pass, 2));
-$count1 = $fetch1->rowcount();
-$row1 = $fetch1->fetch();
+   $sql="SELECT * FROM admin WHERE taikhoan = '$admin_user' AND matkhau = '$admin_pass'  And quyen = 0 ";
+   $result = mysqli_query($conn,$sql);
+   $count1 = mysqli_affected_rows($conn);
 }
 if($count1 > 0) {
 
