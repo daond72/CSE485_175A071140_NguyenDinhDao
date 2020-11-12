@@ -28,11 +28,11 @@
 				<form enctype="multipart/form-data" action="login_query.php" role="form" method="POST">
 					<div class="form-group">
 						<label for="username">Tên đăng nhập</label>
-						<input class="form-control" name="admin_user" placeholder="Username" type="text" required="required">
+						<input class="form-control" name="taikhoan" placeholder="Username" type="text" required="required">
 					</div>
 					<div class="form-group">
 						<label for="password">Mật Khẩu</label>
-						<input class="form-control" name="admin_pass" placeholder="Password" type="password" required="required">
+						<input class="form-control" name="matkhau" placeholder="Password" type="password" required="required">
 					</div>
 					<div class="form-group">
 						<button class="btn btn-block btn-success" name="login"><span class="glyphicon glyphicon-log-in"></span> Đăng Nhập</button>
