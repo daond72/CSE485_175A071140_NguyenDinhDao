@@ -27,19 +27,110 @@
             </div>
         </div>       
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12 title-body">
-                        <h2>
-                            <span>Xét Tuyển Online</span>
-                        </h2>
-                    </div>
-                </div>
+    <form action="add-hoso-process.php" method="post" name="formUser" onsubmit="return validateForm();">
+<div class="container-fluid mt-3">
+         <h4 class="mb-2">Xét tuyển</h4>
+         <form>
+            <div class="form-row">
+               <div class="form-group col-sm-6">
+                  <label for="">Họ và tên</label>
+                  <input type="text" class="form-control"
+                     id="hoten" name="hovaten" placeholder="Nhập tên">
+               </div>
+               <div class="form-group col-sm-6">
+                  <label for="">Giới tính</label>
+                  <input type="text" class="form-control"
+                     id="gioitinh" name="gioitinh" placeholder="Nhập giới tính">
+               </div>
             </div>
-        </div>
-    </div>
+            <div class="form-row">
+            <div class="form-group col-sm-6">
+               <label for="">Ngày sinh</label>
+               <input type="date" class="form-control"
+               id="ngaysinh"name="ngaysinh" placeholder="Nhập ngày sinh">
+            </div>
+            <div class="form-group col-sm-3">
+               <label for="">Dân tộc</label>
+               <input type="text" class="form-control"
+               id="dantoc" name="dantoc" placeholder="Nhập tên">
+            </div>
+            <div class="form-group col-sm-3">
+               <label for="">Tôn giáo</label>
+               <input type="text" class="form-control"
+               id="tongiao" name="tongiao"placeholder="Nhập tên">
+            </div>
+            </div>
+            <div class="form-row">
+               <div class="form-group col-sm-6">
+                  <label for="">Nơi sinh</label>
+                  <input type="text" class="form-control" id="noisinh"name="noisinh">
+               </div>
+               <div class="form-group col-sm-6">
+                  <label for="">Năm tốt nghiệp</label>
+                  <input type="text" class="form-control" id="namtotnghiep" name="namtotnghiep">
+               </div>
+            </div>
+            <div class="form-row">
+               <div class="form-group col-sm-6">
+                  <label for="">Học lực lớp 12</label>
+                  <input type="text" class="form-control"
+                     id="hocluc12" name="hocluc12"placeholder="Nhập">
+               </div>
+               <div class="form-group col-sm-6">
+               <label for="">Hạnh kiểm lớp 12</label>
+                  <input type="text" class="form-control"
+                     id="hạnh kiểm 12"name="hanhkiem12" placeholder="Nhập">
+               </div>
+            </div>
+            <div class="form-row">
+               <div class="form-group col-sm-6">
+                  <label for="">Số CMND/CCCD</label>
+                  <input type="text" class="form-control"
+                     id="cmnd" name="cmnd"placeholder="Số CMND">
+               </div>
+               <div class="form-group col-sm-6">
+               <label for="">Hộ khẩu thường trú</label>
+                  <input type="text" class="form-control"
+                     id="hokhau"name="hokhau" placeholder="Nhập">
+               </div>
+            </div>
+            <a>Nơi học THPT hoặc tương đương(ghi tên tường và nởi trường đóng:huyện(quận), tỉnh(thành phố))</a>
+            <div class="form-group">
+            <label for="">Lớp 10</label>
+               <input type="text" class="form-control"
+               id="lop10"name="lop10" placeholder="Nhập">
+            </div>
+            <div class="form-group">
+            <label for="">Lớp 11</label>
+               <input type="text" class="form-control"
+               id="lop11" name="lop11"placeholder="Nhập">
+            </div>
+            <div class="form-group">
+            <label for="">Lớp 12</label>
+               <input type="text" class="form-control"
+               id="lop12"name="lop12" placeholder="Nhập">
+            </div>
+            <div class="form-group">
+            <label for="">Khu vực(thuôc khu vực nào thì ghi xuống phía dưới)</label>
+               <input type="text" class="form-control"
+               id="khuvuc"name="khuvuc" placeholder="Nhập">
+            </div>
+            <div class="form-group">
+            <label for="">Địa chỉ liên hệ</label>
+               <input type="text" class="form-control"
+               id="diachi"name="diachi" placeholder="Nhập">
+            </div>
+            <div class="form-group">
+            <label for="">Số điện thoại thí sinh</label>
+               <input type="text" class="form-control"
+               id="sdt" name="sdt"placeholder="Nhập">
+            </div>
+            <button type="submit" class="btn btn-primary">Nộp học bạ</button>
+         </form>
+      </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <?php include 'footer.php';?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
