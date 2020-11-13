@@ -1,4 +1,3 @@
-
 <?php
 require_once('connect.php');
 $sql = "SELECT * FROM hoso";
@@ -9,6 +8,7 @@ if ($result) {
     <table class="table">
       <thead>
         <tr>
+          <th scope="col">Mã hồ sơ</th>
           <th scope="col">Họ và tên</th>
           <th scope="col">Ngày sinh</th>
           <th scope="col">Giới tính</th>
@@ -23,7 +23,8 @@ if ($result) {
     while($row = mysqli_fetch_assoc($result)){
       ?>
       <tr>
-          <td scope="col"><?php echo $row['hovaten'];?></td>
+          <td scope="col"><?php echo $row['mahoso'];?></td>
+          <td><?php echo $row['hovaten'];?></td>
           <td><?php echo $row['ngaysinh'];?></td>
           <td><?php echo $row['gioitinh'];?></td>
           <td><?php echo $row['sdt'];?></td>
