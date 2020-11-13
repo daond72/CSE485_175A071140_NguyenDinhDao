@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 <div class="container">
     <form method="post">
+    <!-- <form action="view-hoso-process.php" method="get" name="formUser" onsubmit="return validateForm();"> -->
         <div class="form-group form-title">
             <h2>Xem thông tin học bạ ứng tuyển</h2>
         </div>
