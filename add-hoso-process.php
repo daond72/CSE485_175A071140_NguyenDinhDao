@@ -17,13 +17,12 @@
     $khuvuc = $_POST['khuvuc'];
     $diachi = $_POST['diachi'];
     $sdt = $_POST['sdt'];
-
     $sql = "INSERT INTO hoso(hovaten, gioitinh, ngaysinh, sdt, diachi ) 
     VALUES ('$hovaten', '$gioitinh', '$ngaysinh', '$sdt', '$diachi')";
-    $sql1 = "INSERT INTO chitiethoso(dantoc, tongiao, noisinh, namtotnghiep, hocluc12, hanhkiem12, cmnd,
+    $sql1 = "INSERT INTO chitiethoso(mahoso,dantoc, tongiao, noisinh, namtotnghiep, hocluc12, hanhkiem12, cmnd,
     hokhau, lop10, lop11, lop12,khuvuc ) 
-    VALUES ('$dantoc', '$tongiao', '$noisinh', '$namtotnghiep', '$hocluc12', '$hanhkiem12', '$cmnd', '$hokhau','$lop10', 
-    '$lop11', '$lop12', '$khuvuc')";
+    VALUES ((SELECT MAX(mahoso) FROM hoso), '$dantoc', '$tongiao', '$noisinh', $namtotnghiep, '$hocluc12', '$hanhkiem12', $cmnd, '$hokhau','$lop10', 
+    '$lop11', '$lop12', $khuvuc)";
     if(mysqli_query($conn, $sql)){
         mysqli_query($conn, $sql1);
         header('location: index.php');
